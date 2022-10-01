@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'photoApp',
     'taggit',
+    'users',
 ]
 TAGGIT_CASE_INSENSITIVE = True
 MIDDLEWARE = [
@@ -129,3 +130,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = BASE_DIR / 'media/'
+
+LOGIN_URL = 'user:login'
+LOGIN_REDIRECT_URL = 'photo:list'
+
+LOGOUT_REDIRECT_URL = 'photo:list'
